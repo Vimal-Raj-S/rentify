@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title class="bg-info">Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="header"
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+      "
+    >
+      <div class="left" style="margin-left: 15px">
+        <img src="/static/rentify.png" height="75px" width="270px" />
+      </div>
+      <div
+        class="right"
+        style="align-items: center; align-content: center; margin-right: 35px"
+      ></div>
+    </div>
+    <div class="w-50 m-auto p-4 bg-light">
+      <h1 class="text-center m-4 bg-info">Login</h1>
+      <div>
+        <form method="post" enctype="multipart/form-data">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+            "
+          >
+            e-mail :
+            <input type="text" />
+            <br />
+            password :
+            <input type="text" />
+            <button
+              style="margin-top: 25px"
+              type="submit"
+              class="btn btn-primary"
+            >
+              submit
+            </button>
+          </div>
+          {% csrf_token %}
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
